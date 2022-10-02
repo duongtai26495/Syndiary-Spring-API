@@ -19,14 +19,6 @@ public class Image {
 	
 	private String added_by;
 
-	@OneToMany(targetEntity = Vendor.class, mappedBy = "image", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	private List<Vendor> vendors;
-
-	@OneToMany(targetEntity = Category.class, mappedBy = "image", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	private List<Category> categories;
-
-	@ManyToMany(mappedBy = "images")
-	private List<Product> products;
 	
 	public Image() {
 		super();

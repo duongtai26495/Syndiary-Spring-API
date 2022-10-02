@@ -18,8 +18,6 @@ public class UserDTO {
 
     private boolean active;
 
-    private List<Order> orders;
-    
     private int gender;
 
     private int diaries_count = 0;
@@ -79,14 +77,6 @@ public class UserDTO {
 
 	public void setActive(boolean active) {
 		this.active = active;
-	}
-
-	public List<Order> getOrders() {
-		return orders;
-	}
-
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
 	}
 
 	public int getGender() {

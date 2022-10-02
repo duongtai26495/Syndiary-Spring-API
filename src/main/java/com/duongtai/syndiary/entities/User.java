@@ -43,9 +43,6 @@ public class User {
     @JoinColumn(name = "role", referencedColumnName = "role_id")
     private Role role;
 
-    @OneToMany(targetEntity = Order.class, mappedBy = "customer",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<Order> orders;
-    
     public User() {
     }
 
@@ -138,13 +135,5 @@ public class User {
         this.role = role;
     }
 
-	public List<Order> getOrders() {
-		return orders;
-	}
 
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
-	}
-    
-    
 }

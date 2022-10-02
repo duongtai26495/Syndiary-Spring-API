@@ -212,15 +212,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
 
 	@Override
-	public List<Order> findOrderByUsername(String username) {
-		if(username.equals(getUsernameLogin())) {
-			 return findByUsername(username).getOrders();
-		}
-		return null;
-	}
-
-
-	@Override
 	public List<User> findAllUser() {
 		return userRepository.findAll();
 	}
